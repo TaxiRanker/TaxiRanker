@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<title>TAXI RANKER:About</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<style>
+body {font-family: "Lato", sans-serif ; text-align: center;}
+</style>
+<body style="background-color:">
+
+<!-- Navbar -->
+<div class="w3-top">
+<ul class="w3-navbar w3-teal w3-card-2 w3-left-align">
+  <li class="w3-hide-medium w3-hide-large w3-opennav w3-right">
+    <a class="w3-padding-large" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+  </li>
+  <div class="w3-padding w3-large w3-teal"><i class="material-icons w3-large">info </i><i> TAXI RANKER</i></div>
+  <!-- <li><a href="#" class="w3-hover-none w3-hover-text-grey w3-padding-large"><strong>TAXI RANKER</strong></a></li> -->
+  <li class="w3-hide-small"><a href="index.html" class=" w3-padding-large">HOME</a></li>
+  <li class="w3-hide-small"><a href="team.html" class=" w3-padding-large">OUR TEAM</a></li>
+  <li class="w3-hide-small"><a href="help.html" class="w3-padding-large">HELP</a></li>
+  </li>
+</ul>
+</div>
+
+<!-- Navbar on small screens -->
+<div id="navDemo" class="w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+  <ul class="w3-navbar w3-left-align w3-teal">
+    <li><a class="w3-padding-large" href="index.html">HOME</a></li>
+    <li ><a class="w3-padding-large" href="team.html">OUR TEAM</a></li>
+    <li ><a class="w3-padding-large" href="help.html">HELP</a></li>
+  </ul>
+</div>
+
+
+<!-- Page content -->
+<div class="w3-content" style="max-width:1800px;margin-top:46px;">
+
+</div>
+<!-- Page content -->
+<div class="w3-content" style="max-width:1800px;margin-top:46px">
+  <button type="button" style="
+     background-color: teal;
+     border:none;
+     color: white;
+     padding: 15px 32px;
+     text-align: center;
+     text-decoration: none;
+     display: inline-block;
+     margin-top: 40px;
+     font-size: 16px;"><a href="directions.html">Get My Location</a></button>
+
+
+
+  <!-- The Band Section -->
+  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px">
+    <h1 style="font-family:'Comic Sans MS',cursive,sans-serif">WELCOME TO TAXI RANKER</h1>
+    <figure>
+<img src="taxi.jpg";  width="95%"/>
+    </figure>
+    <h2 style="font-family:'Comic Sans MS',cursive,sans-serif">Mission</h2>
+    <p>Our mission is to create a website that will enable people to find the closest
+      and safest route to a taxi rank from where they are using their GPS co-ordinates.</p>
+  <!-- OUR TEAM -->
+  <h3>Our team</h3>
+  <figure>
+    <img src="us.jpg"; style="height:200px; width:250px"/>
+    <img src="code.jpg"; style="height:200px;"/>
+
+
+  </figure>
+
+
+
+
+<!-- End Page Content -->
+</div>
+<script>
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+
+// When the user clicks anywhere outside of the modal, close it
+var modal = document.getElementById('ticketModal');
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+<!-- Add Google Maps -->
+<div id="googleMap" style="height:350px;width: 100%;"></div>
+<script src="http://maps.googleapis.com/maps/api/js"></script>
+<script>
+var myCenter = new google.maps.LatLng(-30.5595, 22.9375);
+
+function initialize() {
+var mapProp = {
+center:myCenter,
+zoom:5,
+scrollwheel:false,
+draggable:false,
+mapTypeId:google.maps.MapTypeId.ROADMAP
+};
+
+var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+var marker = new google.maps.Marker({
+position:myCenter,
+});
+
+marker.setMap(map);
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+
+<article>
+  <div class="w3-container w3-content w3-padding-64" style="max-width:800px";"float:left">
+    <div class="w3-row w3-padding-32">
+      <div class="w3-col m6 w3-large w3-margin-bottom">
+          <h3 style="font-family:'Comic Sans MS',cursive,sans-serif, font-style:bold;">CONTACT</h3>
+        <i class="fa fa-map-marker" style="width:30px"></i> Cape Town, RSA<br>
+        <i class="fa fa-phone" style="width:30px"></i> Phone: +27 21 952 6692<br>
+        <i class="fa fa-envelope" style="width:30px"> </i> Email: taxiranker@code4ct.com<br>
+</article>
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
+  <a href="#" class="w3-hover-text-indigo"><i class="fa fa-facebook-official"></i></a>
+  <a href="#" class="w3-hover-text-light-blue"><i class="fa fa-twitter"></i></a>
+  <p class="w3-medium">Powered by <a href="http//www.code4ct.com" target="_blank">code4ct.com</a></p>
+</footer>
+
+</body>
+</html>
